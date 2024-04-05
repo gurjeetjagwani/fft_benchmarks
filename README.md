@@ -1,5 +1,5 @@
 # fft_benchmarks
-Benchmarks for Large Scale FFTs
+Benchmarks for Large Scale 2D FFTs
 
 
 Results on large 2D FFTs from 32k * 32k upto 131k * 131k (keeping in line with the powers of 2)
