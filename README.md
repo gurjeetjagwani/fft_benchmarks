@@ -17,5 +17,6 @@ Libraries tested:
 
 build command for fftw benchmarks:
 ```
-g++ -std=c++2a -o benchfftw benchmarking_fftw.cpp -fopenmp -lfftw3_threads -lfftw3_omp -lfftw3 -lm -lpthread -isystem benchmark/include -Lbenchmark/build/src -lbenchmark
+g++ -std=c++2a -o benchfftw benchmarking_fftw.cpp -fopenmp -lfftw3_threads -lfftw3_omp -lfftw3 -lm -lpthread -isystem benchmark/include -Lbenchmark/build/src -lbenchmark -lfftw3f -lfftw3f_threads
+
 ```
