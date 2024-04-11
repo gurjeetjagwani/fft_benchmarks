@@ -65,19 +65,13 @@ static void benchmark_exec(int argc, char* argv[], shape_t shape, size_t shape1,
 
     if (std::is_same<T,double>::value)
     {
-        stride_t strided{sizeof(c_in[0]), sizeof(c_in[0])};
-        //size_t tmpd = sizeof(c_in[0]); 
-        //printf("\n Allocating stride \n");
-        //strided = {shape1*tmpd, shape2*tmpd}; 
+        stride_t strided{sizeof(c_in[0]), sizeof(c_in[0])}; 
         benchmark::RegisterBenchmark("Pocket benchmark unoptimised d", bench_pocket_d_unoptimised<T>, shape, strided, c_in, c_out);
         benchmark::RegisterBenchmark("Pocket benchmark optimised d", bench_pocket_d_optimised<T>, shape, strided, c_in, c_out);
     }
     else if (std::is_same<T,float>::value)
     {
         stride_t stridef{sizeof(c_in[0]), sizeof(c_in[0])};
-        //size_t tmpf = sizeof(c_in[0]); 
-        //printf("\n Allocating stride \n");
-        //stridef = {shape1*tmpf, shape2*tmpf}; 
         benchmark::RegisterBenchmark("Pocket benchmark unoptimised f", bench_pocket_f_unoptimised<T>, shape, stridef, c_in, c_out);
         benchmark::RegisterBenchmark("Pocket benchmark optimised f", bench_pocket_f_optimised<T>, shape, stridef, c_in, c_out);
     }
