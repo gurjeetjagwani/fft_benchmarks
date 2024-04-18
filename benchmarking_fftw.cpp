@@ -5,8 +5,8 @@
 #include <vector>
 #include <omp.h>
 
-static int size1;
-static int size2;
+static long size1;
+static long size2;
 
 template<typename T>
 static void s_bench_fftw3_unoptimized(benchmark::State& state, std::vector<std::complex<T>> c1)
