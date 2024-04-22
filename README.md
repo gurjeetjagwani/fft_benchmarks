@@ -2,7 +2,7 @@
 Benchmarks for Large Scale 2D FFTs
 
 
-Results on large 2D FFTs from 32k * 32k upto 131k * 131k (keeping in line with the powers of 2)
+Results on large 2D FFTs from 23k * 23k upto 131k * 131k
 
 Prerequisties:
 - Benchmark : https://github.com/google/benchmark
