@@ -30,4 +30,10 @@ g++ -std=c++2a -o benchpocket benchmarking_pocket.cpp -I ../pocketfft/pocketfft_
 
 ```
 
+build command for MKL benchmarks:
+NOTE: This command assumes you have MKL library installed in the deafult opt location. 
 
+```
+g++ -o benchmkl benchmarking_mkl.cpp -I "/opt/intel/oneapi/mkl/2024.1/include" -m64 -Wl,--start-group /opt/intel/oneapi/mkl/2024.1/lib/libmkl_intel_ilp64.a /opt/intel/oneapi/mkl/2024.1/lib/libmkl_gnu_thread.a /opt/intel/oneapi/mkl/2024.1/lib/libmkl_core.a -Wl,--end-group -lgomp -lpthread -lm -ldl -isystem benchmark/include -Lbenchmark/build/src -lbenchmark
+
+```
